@@ -24,9 +24,7 @@
   .contact {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     color: white;
 
     .content {
@@ -44,6 +42,10 @@
                 height: 20vh;
                 padding-top: 100px;
             }
+        }
+
+         @media only screen and (max-width: 1024px) {
+            padding-left: 80px;
         }
 
       h3 {

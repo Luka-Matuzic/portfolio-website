@@ -11,14 +11,20 @@
 <style lang="scss" scoped>
   .home {
     width: 100%;
-    height: 100vh;
     color: white;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;  
-
+   
     .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 10% 0;
+        min-height: 200px;
+        background-color: rgba(33, 33, 33, .3);
+        align-items: center;
+        margin-top: 250px;
   
       h1 {
         text-align: center;
