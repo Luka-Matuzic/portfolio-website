@@ -1,141 +1,142 @@
 <template>
- <div>
-    <div class="sidepanel">
-      <span class="closebtn" @click="closeNav()">&times;</span>
-      
-      <h2><strong>PORTFOLIO</strong></h2>
-      <router-link class="link" :to="{name: 'home'}">Home</router-link>
-      <router-link class="link" :to="{name: 'about'}">About</router-link>
-      <router-link class="link" :to="{name: 'projects'}">Projects</router-link>
-      <router-link class="link" :to="{name: 'education'}">Education</router-link>
-      <router-link class="link" :to="{name: 'contact'}">Contact</router-link>
-    </div>
-
-    <button class="openbtn" @click="openNav()"> <span class="burger-bars">&#9776;</span></button>
- </div>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a><li><router-link class="link" :to="{name: 'home'}">Home</router-link></li></a>
+      <a><li><router-link class="link" :to="{name: 'about'}">About</router-link></li></a>
+      <a><li><router-link class="link" :to="{name: 'projects'}">Projects</router-link></li></a>
+      <a><li><router-link class="link" :to="{name: 'education'}">Education</router-link></li></a>
+      <a><li><router-link class="link" :to="{name: 'contact'}">Contact</router-link></li></a>
+    </ul>
+  </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    openNav () {
-      document.querySelector(".sidepanel").style.width = "250px";
-    },
 
-    closeNav () {
-      document.querySelector(".sidepanel").style.width = "0";
-    }
-  }
-}
-</script>
-
-
-<style scoped lang="scss" scoped>
-.sidepanel {
-  height: 100vh;
-  width: 0; 
-  position: fixed; 
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(29, 28, 28); 
-  overflow-x: hidden; 
-  padding-top: 110px; 
-  transition: 0.5s;
-
-  span {
-    cursor: pointer;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.5s;
-    
-    &:hover {
-      color: #ccc;
-    }
-  }
-
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 50px;
-    margin-left: 50px;
-    height: 10vh; 
-  }
-}
-
-.openbtn {
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: rgb(71, 70, 70);
-  padding: 10px 15px;
-  border: none;
-  margin: 10px 15px;
-  transition: 0.5s;
-
-   .burger-bars {
-    color: #fff;
-    transition: 0.5s;
-  }
-
-  &:hover {
-    background-color: rgb(72, 71, 71);
-    cursor: pointer;
-
-    .burger-bars {
-      color: #f3af70;
-    }
-  }
-}
-
-h2 {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 15%;
-}
-
-.link {
-  color: rgb(135, 131, 131);
+<style lang="scss" scoped>
+a
+{
   text-decoration: none;
-  display: block;
-  padding: 1.5em 1em;
-  margin: 0 auto;
-  margin-bottom: 2em;
-  text-align: center;
-  transition: 0.5s linear;
+  color: #737171;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: #fff;
-  }
-
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    margin-top: 10px;
-  }
-
-  &::before {
-    left: -2.5px;
-  }
-
-  &:hover:before {
-    background: rgb(228, 22, 22);
-    width: 20%;
-    height: 3px;
-    transition:  0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    color: #e68021;
   }
 }
 
-@media screen and (min-height: 450px) {
-  .sidepanel {
-    padding-top: 100px;
-  }
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 50px;
+  
+  z-index: 1;
+}
 
-  .sidepanel span {
-    font-size: 20px;
-  }
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ccc;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ccc;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #181818;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 </style>

@@ -13,17 +13,13 @@
     width: 100%;
     height: 100vh;
     color: white;
-    background-image: url(../assets/home-img1.jpg);
-    background-repeat: no-repeat;
-    background-position: left; 
-    background-size: cover;
-    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.7);
-    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;  
 
     .content {
-      height: 100vh;
-      transform: translateY(45%);
-
+  
       h1 {
         text-align: center;
         font-weight: lighter;

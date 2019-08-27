@@ -4,12 +4,7 @@
                 <div class="card__image-container">
                     <img class="card__image" src="../assets/grill-bill.png">
                 </div>
-                    
-                <svg class="card__svg" viewBox="0 0 800 500">
-                    <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#181818"/>
-                    <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="2" fill="transparent"/>
-                </svg>
-                    
+               
                 <div class="card__content">
                     <h2 class="card__title">Grill Bill</h2>
                     <p>Online ordering food platform with authentication, validation and Firebase database.</p>
@@ -25,11 +20,6 @@
                     <img class="card__image haus-adria-img" src="../assets/haus-adria.png">
                 </div>
                
-                <svg class="card__svg" viewBox="0 0 800 500">
-                    <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#181818"/>
-                    <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke-width="2" fill="transparent"/>
-                </svg>
-                    
                 <div class="card__content">
                     <h2 class="card__title">Haus Adria</h2>
                     <p>Haus Adria was a licensed real estate agency real estate brokerage agency based in Duga Resa.</p>
@@ -44,11 +34,6 @@
                 <div class="card__image-container">
                     <img class="card__image brionka-img" src="../assets/brionka.png">
                 </div>
-                    
-                <svg class="card__svg" viewBox="0 0 800 500">
-                    <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#181818"/>
-                    <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke-width="2" fill="transparent"/>
-                </svg>
                     
                 <div class="card__content">
                     <h2 class="card__title">Brionka</h2>
@@ -66,35 +51,35 @@
 
 <style lang="scss" scoped>
 .projects {
-    width: 100%;
-    height: 100vh;
-    margin: 2em 0;
+    
+    margin: 1.5em 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
     color: #ccc;
-    transform: translateX(-25px);  
-    overflow: hidden;
+    transform: translateX(25px);  
 
     .card {
         position: relative;
         background: #181818;
-        transform: translateX(-33px);
+        transform: translateX(-25px);
         width: 90%;
-        height: 650px;
+        height: 85%;
         border-radius: 6px;
-        padding: 2rem;
-        margin: 3em 2em;
+        padding: 1em;
+        margin: 3em 1em;
         color: #aaa;
         box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2),
                     0 0 1rem rgba(0,0,0,0.2);
-        overflow: hidden;
+ 
         transition: 0.8s linear;
 
         //4k monitors
-        @media only screen and (min-width: 2500px) and (max-width: 4000px) {
-            width: 85%;
+            @media only screen and (min-width: 2500px) and (max-width: 4000px) {
+            width: 80%;
+            height: 850px;
             transform: translateY(300px);
+            margin-left: 55px;
         } 
 
 
@@ -105,14 +90,14 @@
             margin: 0 1em;
 
             &:hover {
-                color:  #f3af70;
+                color:  #e68021;
             }
         }
         
         &__image-container {
-            margin: -2rem -2rem 1rem -2rem;
+            margin: -2rem -1rem 1rem -1rem;
         }
-        
+
         &__line, a {
         opacity: 0;
         animation: LineFadeIn .8s .8s forwards ease-in;
@@ -129,76 +114,16 @@
             color: white;
             margin-top: 0;
             font-weight: 800;
-            letter-spacing: 0.01em;
         }
         
         &__content {
-            margin-top: -1rem;
             opacity: 0;
             animation: ContentFadeIn .8s 1.6s forwards;
             padding-bottom: 50px;
 
-            h2 {
-                margin-bottom: 3%;
-            } 
-        }
-        
-        &__svg {
-            position: absolute;
-            left: 0;
-            top: 115px;
-
-            //4k monitors
-            @media only screen and (min-width: 2500px) and (max-width: 4000px) {
-                top: -40px;  
-            } 
-
-            @media only screen and (min-width: 1221px) and (max-width: 1350px) {
-               top: 150px; 
-            }
-
-            @media only screen and (min-width: 1111px) and (max-width: 1220px) {
-               top: 170px; 
-            }
-
-            @media only screen and (min-width: 1054px) and (max-width: 1110px) {
-               top: 190px; 
-            }
-
-            @media only screen and (min-width: 851px) and (max-width: 910px) {
-               top: 150px; 
-            }
-
-            @media only screen and (min-width: 725px) and (max-width: 850px) {
-               top: 175px; 
-            }
-
-            @media only screen and (min-width: 681px) and (max-width: 724px) {
-               top: 30px; 
-            }
-
-            @media only screen and (min-width: 621px) and (max-width: 680px) {
-               top: 55px; 
-            }
-
-            @media only screen and (min-width: 550px) and (max-width: 620px) {
-               top: 85px; 
-            }
-
-            @media only screen and (min-width: 441px) and (max-width: 500px) {
-               top: 145px; 
-            }
-
-            @media only screen and (min-width: 421px) and (max-width: 440px) {
-               top: 170px; 
-            }
-
-            @media only screen and (min-width: 300px) and (max-width: 420px) {
-               top: 185px; 
-            }
-           
-            @media only screen and (min-width: 200px) and (max-width: 300px) {
-               top: 200px; 
+                h2 {
+                    margin-bottom: 3%;
+                } 
             }
         }
 
@@ -219,7 +144,4 @@
             100% { transform: translateY(0) scale(1.0); opacity: 1; filter: blur(0); }
         }
     }
-
-   
-}
 </style>

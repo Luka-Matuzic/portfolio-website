@@ -36,23 +36,40 @@
 
 <style lang="scss" scoped>
 .education {
-    width: 100%;
-    height: 100vh;
-    margin: 8.5em 0 5em 0;
-    margin-left: -80px;
+    margin: 5.4em;
+    margin-left: 4em;
     color: #ccc;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    overflow: hidden;
 
-    @media only screen and (min-width: 2500px) and (max-width: 4000px) {
-          transform: translateY(305px);  
+    //4k monitors
+      @media only screen and (min-width: 2500px) and (max-width: 4000px) {
+          transform: translateY(300px);
+      } 
+
+     @media only screen and (min-width: 320px) and (max-width: 460px) {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 50px;
+            margin-left: 12px;
+
+            div {
+                img {
+                    margin-left: -1.5em;
+                }
+
+                p {
+                    margin-left: -1.5em;
+                }
+            }
       }
-
+    
     div {
-        padding: 2em 2em;
+        padding: 3em 1em;
+        margin: .5em;
         background: rgb(14, 13, 13);
-        height: 100vh;
-
+     
         img {
             display: block;
             margin: 0 auto;
@@ -69,7 +86,7 @@
 
             li {
                 list-style-position: inside;
-                margin-left: 25%;
+                margin-left: 10%;
                 text-align: left;
                 
                 a {

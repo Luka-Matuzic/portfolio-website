@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-      <Navbar />
-
-     <transition
-        name="fade"
-        mode="out-in"
-        @beforeLeave="beforeLeave"
-        @enter="enter"
-        @afterEnter="afterEnter"
-       >
-         <router-view/>
-      </transition>
+    <Navbar />
+    <transition
+      name="fade"
+      mode="out-in"
+      @beforeLeave="beforeLeave"
+      @enter="enter"
+      @afterEnter="afterEnter"
+      >
+        <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -43,8 +42,8 @@ export default {
     },
     afterEnter(element) {
       element.style.height = 'auto';
-    },
-  },
+    }
+  }
 }
 </script>
 
@@ -56,23 +55,28 @@ export default {
 	padding: 0;
 	margin: 0;
   box-sizing: border-box;
-	}
+}
 
 #app {
   font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
-  background: rgb(14, 13, 13);
   width: 100%;
-  height: 100%;
-  display: flex;
+  height: 100vh;
+  background-color: #333;
+  overflow-x: hidden;
 
-    //4k monitors
-        @media only screen and (min-width: 2500px) and (max-width: 4000px) {
-            height: 100vh;
-        } 
+  //4k monitors
+  @media only screen and (min-width: 2500px) and (max-width: 4000px) {
+      height: 100vh;
+  } 
 
+  background-image: url("./assets/home-img-de.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .fade-enter-active,
@@ -80,11 +84,10 @@ export default {
   transition-duration: 0.3s;
   transition-property: height, opacity;
   transition-timing-function: ease;
-  overflow: hidden;
 }
 
 .fade-enter,
 .fade-leave-active {
-  opacity: 0
+  opacity: 0;
 }
 </style>

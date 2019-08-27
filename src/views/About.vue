@@ -14,7 +14,7 @@
         </p>
       </div>
       
-      <div>
+      <div class="img-div">
         <img class="profile-pic" src="../assets/profile-pic.jpg">
       </div>   
   </div>
@@ -29,7 +29,7 @@
     margin: 1.4em 0;
     color: #ccc;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 30px;
 
      @media only screen and (min-width: 2500px) and (max-width: 4000px) {
@@ -37,77 +37,56 @@
           padding-left: 300px;
       }
 
-      
+      @media only screen and (min-width: 670px) and (max-width: 808px) {
+        .img-div {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
+       @media only screen and (min-width: 809px) and (max-width: 989px) {
+        .img-div {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 500px) {
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+      }
+
+      @media only screen and (max-width: 320px) {
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        .img-div {
+          margin-left: -11.5px;
+        }
+      }
+
     div {
       width: 100%;
-      height: 100vh;
-
-      @media only screen and (min-width: 300px) and (max-width: 400px) {
-        transform: translateX(-20px);  
-        margin: -5em 0 0 0;
-      }
-
-      @media only screen and (min-width: 1126px) and (max-width: 1249px) {
-        transform: translateX(-35px);  
-      }
-
-      @media only screen and (min-width: 901px) and (max-width: 1125px) {
-          transform: translateX(-35px);  
-      }
-
-      @media only screen and (min-width: 722px) and (max-width: 900px) {
-        transform: translateX(-35px);  
-      }
-
-      @media only screen and (min-width: 722px) and (max-width: 900px) {
-        transform: translateX(-35px);  
-      }
-
-      @media only screen and (min-width: 300px) and (max-width: 722px) {
-        transform: translateX(-35px); 
-        margin: -5em 0 0 0;
-      }
+      height: 100%;
 
       p {
-      font-weight: lighter;
-      margin: 7em 0;
-      text-align: left;
-      line-height: 1.5em;
-      transform: translateY(120px);
-
-      @media only screen and (min-width: 1126px) and (max-width: 1249px) {
-        transform: translateY(120px);
-        margin: 5em 0;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        margin: 5em 2em;
+        font-weight: lighter;
+        line-height: 1.5em;
       }
+  }
 
-      @media only screen and (min-width: 901px) and (max-width: 1125px) {
-        transform: translateY(60px);
-        margin: 5em 0;
-      }
-
-      @media only screen and (min-width: 722px) and (max-width: 900px) {
-        transform: translateY(50px);
-        margin: 5em 0;
-      }
-    }
-
+  .img-div {
     .profile-pic {
-      width: 100%;
-      max-width: 600px;
-      height: 80%;
-      max-height: 600px;
-      margin: 3.5em 0;
-      border-radius: 5%;
-      transform: translateY(30px);
-
-
-      @media only screen and (min-width: 723px) and (max-width: 900px) {
-          width: 100%;
-          height: 400px;
-          border-radius: 5%;
-          transform: translateY(70px); 
-        }
-    }
+        width: 90%;
+        max-width: 600px;
+        height: 80%;
+        max-height: 550px;
+        margin: 3.5em 0;
+        border-radius: 5%;
+        transform: translateY(30px);
+        margin-left: 20px;
+      }
   }
 
     span {
