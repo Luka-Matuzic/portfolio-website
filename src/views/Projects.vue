@@ -76,10 +76,10 @@
 
         //4k monitors
             @media only screen and (min-width: 2500px) and (max-width: 4000px) {
-            width: 80%;
-            height: 850px;
+            width: 70%;
+            height: 600px;
             transform: translateY(300px);
-            margin-left: 55px;
+            margin-left: 80px;
         } 
 
 

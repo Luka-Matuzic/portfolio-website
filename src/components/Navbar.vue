@@ -128,8 +128,8 @@ a
 
 #menu li
 {
-  padding: 2.5em 0;
-  margin: .5em 0;
+  padding: 1.5em 0;
+  margin: 1.5em 0;
   font-size: 18px;
 }
 

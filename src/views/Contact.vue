@@ -40,6 +40,7 @@
      
       //4k monitors
         @media only screen and (min-width: 2500px) and (max-width: 4000px) {
+
              div {
                 height: 20vh;
                 padding-top: 100px;

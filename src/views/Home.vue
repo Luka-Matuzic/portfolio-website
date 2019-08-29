@@ -12,6 +12,11 @@
   .home {
     width: 100%;
     color: white;
+
+    @media only screen and (min-width: 2560px) and (max-width: 4000px) {
+          transform: translateY(305px);  
+          
+      }
    
     .content {
         display: flex;
