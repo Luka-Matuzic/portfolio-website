@@ -24,11 +24,13 @@
   .contact {
     width: 100%;
     height: 100vh;
-   
+    margin: -1em 0;
+    position: relative;
     color: white;
+    overflow: hidden;
 
     .content {
-      margin: 15.1em -3em;
+      margin: 14em -3em;
       margin-left: -8em;
       display: grid;
       grid-template-columns: auto;

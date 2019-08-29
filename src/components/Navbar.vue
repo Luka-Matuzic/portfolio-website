@@ -34,7 +34,6 @@ a
   position: relative;
   top: 30px;
   left: 50px;
-  
   z-index: 1;
 }
 
@@ -113,7 +112,8 @@ a
 #menu
 {
   position: absolute;
-  width: 300px;
+  width: 250px;
+  height: 105.5vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -128,8 +128,9 @@ a
 
 #menu li
 {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 2.5em 0;
+  margin: .5em 0;
+  font-size: 18px;
 }
 
 /*

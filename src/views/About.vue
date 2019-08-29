@@ -26,15 +26,20 @@
   .about {
     width: 100%;
     height: 100vh;
-    margin: 1.4em 0;
+    margin: -2em .5em;
     color: #ccc;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 30px;
+    position: relative;
 
-     @media only screen and (min-width: 2500px) and (max-width: 4000px) {
+     @media only screen and (min-width: 2560px) and (max-width: 4000px) {
           transform: translateY(305px);  
           padding-left: 300px;
+
+          p {
+           height: 800px;
+          }
       }
 
       @media only screen and (min-width: 670px) and (max-width: 808px) {
@@ -44,7 +49,7 @@
         }
       }
 
-       @media only screen and (min-width: 809px) and (max-width: 989px) {
+       @media only screen and (min-width: 809px) and (max-width: 1004px) {
         .img-div {
           width: 60%;
           margin: 0 auto;
@@ -85,7 +90,7 @@
         margin: 3.5em 0;
         border-radius: 5%;
         transform: translateY(30px);
-        margin-left: 20px;
+        margin-left: 8px;
       }
   }
 

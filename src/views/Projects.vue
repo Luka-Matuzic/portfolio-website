@@ -9,7 +9,7 @@
                     <h2 class="card__title">Grill Bill</h2>
                     <p>Online ordering food platform with authentication, validation and Firebase database.</p>
                     <br>
-                    <p>Technologies: HTML, CSS, SASS, Vue.js, Vuex, Firebase</p>
+                    <p>Technologies: HTML, SASS, Vue.js, Firebase</p>
                 </div>
                 <a href="https://grill-bill.netlify.com/"><i class="fas fa-eye fa-2x"></i></a>
                 <a href="https://github.com/Luka-Matuzic/e-commerce-app"><i class="fab fa-github fa-2x"></i></a>
@@ -62,7 +62,7 @@
     .card {
         position: relative;
         background: #181818;
-        transform: translateX(-25px);
+        transform: translateX(-22px);
         width: 90%;
         height: 85%;
         border-radius: 6px;

@@ -66,8 +66,9 @@
       }
     
     div {
-        padding: 3em 1em;
-        margin: .5em;
+        position: relative;
+        padding: 2em 1em;
+        margin: .8em;
         background: rgb(14, 13, 13);
      
         img {

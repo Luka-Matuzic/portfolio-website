@@ -1,15 +1,22 @@
 <template>
   <div id="app">
+    <vue-particles class="particles" 
+      color="#e68021"
+      :particlesNumber="80"
+      :clickEffect="false">
+    </vue-particles>
+
     <Navbar />
-    <transition
-      name="fade"
-      mode="out-in"
-      @beforeLeave="beforeLeave"
-      @enter="enter"
-      @afterEnter="afterEnter"
-      >
-        <router-view/>
-    </transition>
+    <router-view>
+      <transition
+        name="fade"
+        mode="out-in"
+        @beforeLeave="beforeLeave"
+        @enter="enter"
+        @afterEnter="afterEnter"
+        >
+        </transition>
+    </router-view>
   </div>
 </template>
 
@@ -71,13 +78,14 @@ export default {
   @media only screen and (min-width: 2500px) and (max-width: 4000px) {
       height: 100vh;
   } 
-
-  background-image: url("./assets/home-img-de.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
 }
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
 .fade-enter-active,
 .fade-leave-active {
